@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "org.springframework.security:spring-security-web:5.0.1.RELEASE"
+    compile "org.springframework.security:spring-security-config:5.0.1.RELEASE"
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '5.0.1.RELEASE'
+    compileOnly 'javax.servlet:javax.servlet-api:3.0.1'
+}
